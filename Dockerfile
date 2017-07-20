@@ -6,7 +6,7 @@ RUN apt-get update
 RUN apt-get -y install mysql-client
 RUN apt-get clean all
 
-# download JobScheduler Master
+# download JOC Cockpit
 ADD https://download.sos-berlin.com/JobScheduler.1.11/joc_linux.1.11.3.tar.gz /usr/local/src/
 RUN test -e /usr/local/src/joc_linux.1.11.3.tar.gz && tar zxvf /usr/local/src/joc_linux.1.11.3.tar.gz -C /usr/local/src/
 RUN rm -f /usr/local/src/joc_linux.1.11.3.tar.gz
