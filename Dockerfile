@@ -16,6 +16,6 @@ COPY joc_install.xml /usr/local/src/joc/install.xml
 COPY init.sh /usr/local/bin/init_joc.sh
 RUN chmod +x /usr/local/bin/init_joc.sh
 
-EXPOSE 4444 40444
+EXPOSE 4446 40446
 
 CMD ["/usr/local/bin/init_joc.sh"]
