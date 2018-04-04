@@ -7,11 +7,11 @@ RUN apt-get update && \
     apt-get clean all
 
 # download JOC Cockpit
-ADD https://download.sos-berlin.com/JobScheduler.1.11/joc_linux.1.11.5.tar.gz /usr/local/src/
-RUN test -e /usr/local/src/joc_linux.1.11.5.tar.gz && \
-    tar zxvf /usr/local/src/joc_linux.1.11.5.tar.gz -C /usr/local/src/ && \
-    rm -f /usr/local/src/joc_linux.1.11.5.tar.gz && \
-    ln -s /usr/local/src/joc.1.11.5 /usr/local/src/joc
+ADD https://download.sos-berlin.com/JobScheduler.1.11/joc_linux.1.11.7.tar.gz /usr/local/src/
+RUN test -e /usr/local/src/joc_linux.1.11.7.tar.gz && \
+    tar zxvf /usr/local/src/joc_linux.1.11.7.tar.gz -C /usr/local/src/ && \
+    rm -f /usr/local/src/joc_linux.1.11.7.tar.gz && \
+    ln -s /usr/local/src/joc.1.11.7 /usr/local/src/joc
 COPY joc_install.xml /usr/local/src/joc/install.xml
 
 COPY init.sh /usr/local/bin/init_joc.sh
